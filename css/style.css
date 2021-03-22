@@ -1,16 +1,80 @@
+
+header-wrap {
+    border-bottom: 1px solid #999d;
+}
+.nav-wrap {    
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+}
+
+ #logo img {
+    width: 10rem;
+    padding: 1rem;
+}
+
+.nav-wrap ul {
+}
+
+.nav-wrap ul li {
+    display: inline-block;
+}
+
+
+.nav-wrap ul li: hover {
+    color: #fff;
+    background-color: aqua;
+}
+
+
+.nav-wrap ul li a {
+    padding: 2rem;
+    line-height: 5rem;
+}
+
+
+
+/* slide-banner */
+
+.slide-banner{
+    height: 520px;
+    line-height: 520px;
+    font-size: 50px;
+    text-align: center;
+    overflow: hidden;
+    width: 100vw;
+    color: #fff;
+    background-image: url(./img/bg1.jpg);
+    background-size: cover;
+
+}
+
+
 /* fore card  */
+
+.production {
+    padding: 8rem 0;
+}
 
 .foreCard-wrap {
     width: 80%;
     margin: 0 auto;
 }
 
+.contents-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+
 .contents {
-    background-color: antiquewhite;
-    width: 49%;
-    float: left;
-    margin: 0.5%;
-    padding: 1.8%;
+    border-radius: 0.4rem;
+    border: 1px solid #9999;
+    background-color: #fff;
+    width: 48%;
+    margin: 1%;
+    padding: 3%;
 }
 
 .contents h2 {
@@ -19,8 +83,104 @@
     font-weight: 800;
 }
 
+
 /* tittle-contents */
 
-.tittle-wrap {
-    margin-bottom: 1rem;
+.tittle-Wrap {
+    margin-bottom: 2.4rem;
+    display: flex;
 }
+
+.tittle-Wrap img {
+    height: 2.4rem;
+    margin-left: 1%;
+}
+
+.tittle-Wrap h1 {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    margin-left: 2rem;
+}
+
+
+/* portfolio */
+
+.portfolio {
+    padding: 8rem 0;
+    background-color: #F0F2FA;
+}
+
+.portfolio-contents {
+    width: 80%;
+    margin: 0 auto;
+   
+}
+
+.block-wrap .card {
+    margin: 1%;
+    background-color: #fff;
+    border: 1px solid #9999;
+    border-radius: 0.4rem;
+    display: flex;
+    flex
+}
+
+.block-wrap img {
+    width: 50%;
+}
+
+.contents-boxa {
+    margin: auto; 
+}
+.contents-boxb {
+    background-color: aquamarine
+}
+
+
+.box-style {
+    background-color: dodgerblue;
+    display: inline-block;
+    padding: 0.6rem;
+    border-radius: 0.3rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
