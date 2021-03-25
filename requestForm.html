@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    </head>
+    <body>
+        <!--문의내용입력폼-->
+        <form action="demo_simpleform.asp" method="post" entype="multipart/form-data" name="RequestForm" onsubmit="return checkBox()" >
+            <ul class="Rform">
+                <input type="text" placeholder="문의제목 : 제목을 입력해주세요" name="ReTitle" size="50" /><br>
+               <input type="text" placeholder="이름 : 성함을 입력해주세요" name="ReName" size="50" /><br>
+                <input type="text" placeholder="Email : 답변받을 이메일을 입력해주세요" name="ReAdrss" size="50" /><br>
+                <input type="text" placeholder="문의내용 : 문의사항을 입력해주세요" name="ReText" size="5000" /><br>
+                <input type="file" placeholder="파일첨부 : 파일을 선택해주세요" name="FileName" /><br>
+                개인정보 수집 및 이용에 대한 안내<br>
+                <textarea>1. 목적 : 지원자 개인 식별, 지원의사 확인, 입사전형의 진행, 고지사항 전달,    입사지원자와의 원활한 의사소통, 지원이력 확인 및 면접 불합격자 재지원 제한<br>2. 항목 : 아이디(이메일주소), 비밀번호, 이름, 생년월일, 휴대폰번호<br>3. 보유기간 : 회원 탈퇴 시까지 보유 
+                </textarea><br>
+                <input type="checkbox" name="RequestCheck" />
+                개인정보 수집 및 이용에 동의합니다.
+                <input type="submit" value="문의하기" />
+            </ul>
+        </form>
+    <script>
+        //checkbox값이 true일때만 객체값(상담문의내용) 넘겨주는 함수
+        function checkBox()
+        {
+            if(document.RequestForm.RequestCheck.checked)
+            {
+                document.RequestForm.RequestCheck.value='on';
+                document.RequestForm.submit();
+            }
+            else
+            return false;
+        }
+        //입력값 객체로 받는 변수 
+        var sendForm = '{"SendForm" : ['+
+        '{"문의제목" : "ReTitle", "이름" : "ReName", "Email" : "ReAdrss", "문의내용" : "ReText", "파일첨부" : "FileName"}]}'
+        obj = JSON.parse(sendForm);
+        document.getElementById("demo").innerHTML =
+        obj.SendForm[0].문의제목 + obj.SendForm[0].이름 + obj.SendForm[0].Email + obj.SendForm[0].문의내용 +obj.SendForm[0].파일첨부;
+    </script>
+    </body>
