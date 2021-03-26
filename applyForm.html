@@ -3,7 +3,7 @@
     <head>
     </head>
     <body>
-        <!--문의내용입력폼-->
+        <!--지원문의입력폼-->
         <form action="demo_simpleform.asp" method="post" entype="multipart/form-data" name="RequestForm" onsubmit="return checkBox()" >
             <ul class="Rform">
                 <input type="text" placeholder="문의제목 : 제목을 입력해주세요" name="ReTitle" size="50" /><br>
@@ -12,7 +12,7 @@
                 <input type="text" placeholder="문의내용 : 문의사항을 입력해주세요" name="ReText" size="5000" /><br>
                 <input type="file" placeholder="파일첨부 : 파일을 선택해주세요" name="FileName" /><br>
                 개인정보 수집 및 이용에 대한 안내<br>
-                <textarea>1. 목적 : 문의접수자 개인 식별, 문의내용 확인, 문의자와의 원활한 의사소통, 문의이력 확인<br>2. 항목 : 아이디(이메일주소), 비밀번호, 이름, 생년월일, 휴대폰번호<br>3. 보유기간 : 서비스 종료시까지 보유, 데이터스는 개인정보의 수집 및 제공받은 목적이 달성된 경우, 고객의 동의 철회, 해당 서비스의 폐지, 사업의 종료 등 그 개인정보가 불필요하게 되었을 경우에는 해당 개인정보를 지체 없이 파기합니다. 
+                <textarea>1. 목적 : 지원자 개인 식별, 지원의사 확인, 입사고지사항 전달, 지원자와의 원활한 의사소통, 지원이력 확인<br>2. 항목 : 아이디(이메일주소), 비밀번호, 이름, 생년월일, 휴대폰번호<br>3. 보유기간 : 데이터스는 개인정보의 수집 및 제공받은 목적이 달성된 경우, 고객의 동의 철회, 해당 서비스의 폐지, 사업의 종료 등 그 개인정보가 불필요하게 되었을 경우에는 해당 개인정보를 지체 없이 파기합니다. 
                 </textarea><br>
                 <input type="checkbox" name="RequestCheck" />
                 개인정보 수집 및 이용에 동의합니다.
@@ -20,7 +20,7 @@
             </ul>
         </form>
     <script>
-        //checkbox값이 true일때만 객체값(상담문의내용) 넘겨주는 함수
+        //checkbox값이 true일때만 객체값(지원문의내용) 넘겨주는 함수
         function checkBox()
         {
             if(document.RequestForm.RequestCheck.checked)
