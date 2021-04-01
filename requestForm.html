@@ -4,38 +4,95 @@
     </head>
     <body>
         <!--문의내용입력폼-->
-        <form action="demo_simpleform.asp" method="post" entype="multipart/form-data" name="RequestForm" onsubmit="return checkBox()" >
-            <ul class="Rform">
+        <form action="demo_simpleform.asp" method="post" entype="multipart/form-data" name="RequestForm" onsubmit="return checkBoxA()" >
                 <input type="text" placeholder="문의제목 : 제목을 입력해주세요" name="ReTitle" size="50" /><br>
-               <input type="text" placeholder="이름 : 성함을 입력해주세요" name="ReName" size="50" /><br>
+                <input type="text" placeholder="이름 : 성함을 입력해주세요" name="ReName" size="50" /><br>
                 <input type="text" placeholder="Email : 답변받을 이메일을 입력해주세요" name="ReAdrss" size="50" /><br>
                 <input type="text" placeholder="문의내용 : 문의사항을 입력해주세요" name="ReText" size="5000" /><br>
-                <input type="file" placeholder="파일첨부 : 파일을 선택해주세요" name="FileName" /><br>
+                <!--<input type="file" placeholder="파일첨부 : 파일을 선택해주세요" name="FileName" /><br>-->
                 개인정보 수집 및 이용에 대한 안내<br>
-                <textarea>1. 목적 : 지원자 개인 식별, 지원의사 확인, 입사전형의 진행, 고지사항 전달,    입사지원자와의 원활한 의사소통, 지원이력 확인 및 면접 불합격자 재지원 제한<br>2. 항목 : 아이디(이메일주소), 비밀번호, 이름, 생년월일, 휴대폰번호<br>3. 보유기간 : 회원 탈퇴 시까지 보유 
+                <textarea>1. 목적 : 문의접수자 개인 식별, 문의내용 확인, 문의자와의 원활한 의사소통, 문의이력 확인<br>2. 항목 : 아이디(이메일주소), 비밀번호, 이름, 생년월일, 휴대폰번호<br>3. 보유기간 : 서비스 종료시까지 보유, 데이터스는 개인정보의 수집 및 제공받은 목적이 달성된 경우, 고객의 동의 철회, 해당 서비스의 폐지, 사업의 종료 등 그 개인정보가 불필요하게 되었을 경우에는 해당 개인정보를 지체 없이 파기합니다. 
                 </textarea><br>
-                <input type="checkbox" name="RequestCheck" />
+                <input type="checkbox" name="RequestCheckA" />
                 개인정보 수집 및 이용에 동의합니다.
                 <input type="submit" value="문의하기" />
-            </ul>
         </form>
     <script>
-        //checkbox값이 true일때만 객체값(상담문의내용) 넘겨주는 함수
-        function checkBox()
+        //checkbox값이 true일때만 객체값(상담문의내용) 리턴함수
+        function checkBoxA()
         {
-            if(document.RequestForm.RequestCheck.checked)
+            if(document.RequestForm.RequestCheckA.checked)
             {
-                document.RequestForm.RequestCheck.value='on';
+                document.RequestForm.RequestCheckA.value='on';
                 document.RequestForm.submit();
             }
             else
             return false;
         }
+
+
+        const nodemailer = require('nodemailer');
+        const { google } = require('googleapis');
+
+        // id's와 secrets은 .env file로 입력받음.
+        const CLIENT_ID = '1067587267703-iu4aec3qpslhn6taag937joklb7no3h9.apps.googleusercontent.com';
+        const CLEINT_SECRET = 'JFDWniws8jTwqakqxTaVRWrJ';
+        const REDIRECT_URI = 'https://developers.google.com/oauthplayground';
+        const REFRESH_TOKEN = '1//04n-bMheGKeBxCgYIARAAGAQSNwF-L9Ir77Ay1URDP3cGyRYQ3Y6sRA3IyF5oSh0U4cCscKh_Ufqq2XJUFOuOnasa-Afjx0b_b-U';
+
+        const oAuth2Client = new google.auth.OAuth2(
+            CLIENT_ID,
+            CLEINT_SECRET,
+            REDIRECT_URI
+        );
+        oAuth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
+
+        //gmail 전송 함수
+        async function sendMail() {
+        try {
+                const accessToken = await oAuth2Client.getAccessToken();
+                const transport = nodemailer.createTransport({
+                    service: 'gmail',
+                    auth: {
+                            type: 'OAuth2',
+                            user: 'datausss@gmail.com',
+                            clientId: CLIENT_ID,
+                            clientSecret: CLEINT_SECRET,
+                            refreshToken: REFRESH_TOKEN,
+                            accessToken: accessToken,
+                        },
+        });
+        
         //입력값 객체로 받는 변수 
         var sendForm = '{"SendForm" : ['+
         '{"문의제목" : "ReTitle", "이름" : "ReName", "Email" : "ReAdrss", "문의내용" : "ReText", "파일첨부" : "FileName"}]}'
-        obj = JSON.parse(sendForm);
-        document.getElementById("demo").innerHTML =
-        obj.SendForm[0].문의제목 + obj.SendForm[0].이름 + obj.SendForm[0].Email + obj.SendForm[0].문의내용 +obj.SendForm[0].파일첨부;
+        sdobj = JSON.parse(sendForm);
+        //document.getElementById("demo").innerHTML =
+        //obj.SendForm[0].문의제목 + obj.SendForm[0].이름 + obj.SendForm[0].Email + obj.SendForm[0].문의내용 +obj.SendForm[0].파일첨부; 
+        //**위 주석은 홈페이지에 다시 입력값을 리턴해서 출력시킬때 필요한것.
+
+
+        //지원문의 객체값 mapping해주는 객체'mailOptions'
+        const mailOptions = {
+            from: 'sdobj.SendForm[0].이름' <sdobj.SendForm[0].Email>',
+            to: 'datausss@gmail.com',
+            subject: 'sdobj.SendForm[0].문의제목',
+            text: 'sdobj.SendForm[0].문의내용',
+            html: '<h1>sdobj.SendForm[0].문의내용</h1>',
+         };
+
+        const result = await transport.sendMail(mailOptions);
+        return result;
+        } catch (error) {
+            return error;
+            }
+        }
+
+        //콘솔창 확인메세지
+        sendMail()
+        .then((result) => console.log('Email sent...', result))
+        .catch((error) => console.log(error.message));
+
+
     </script>
     </body>
