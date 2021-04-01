@@ -1,0 +1,500 @@
+/************************ 
+reset
+*************************/
+
+article {margin-bottom: 10rem;}
+.sec-img-link {margin-bottom: 0;}
+
+.sec-padding {padding: 2rem;}
+.sec-img-link {padding: 0;}
+form {
+    margin-bottom: 10rem;
+}
+
+/************************ 
+header
+*************************/
+
+.sub-header {
+    background-image: url('../img/bg3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    color: #fff;
+    height: 16rem;
+}
+
+.sub-header h1 {
+    line-height: 16rem;
+    padding: 0 10%;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.sub-header h1::after {
+    content: 'Customer Support';
+    font-weight: 200;
+    margin-left: 0.6rem;
+}
+
+/************************ 
+sec-product
+*************************/
+
+.organ-find-wrap {
+    text-align: center;
+    padding: 8rem 0 ;
+}
+
+.organ-find-wrap h1 {
+    font-size: 2.4rem;
+    font-weight: 200;
+    margin-bottom: 1.1rem;
+}
+
+
+
+
+/************************ 
+sec-tab
+*************************/
+
+.sec-tab {
+    padding: 0 4rem
+}
+
+.tab-box-wrap {
+    margin: auto;
+    display: flex;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    width: 80%;
+    margin-bottom: 8rem;
+}
+
+.tab-box-wrap div {
+    padding: 0.6rem 2rem;
+    width: 50%;
+    box-sizing:border-box;
+    cursor: pointer;
+}
+
+
+.shining-none {
+    border: 1px solid #a5a5a5;
+    color: #a5a5a5;
+}
+
+.shining-r {
+    border: 2px solid coral;
+    color: coral;
+    margin-left: -1px;
+    z-index: 2;
+}
+
+
+
+.shining-l {
+    border: 2px solid coral;
+    color: coral;
+    margin-left: -1px;
+    z-index: 2;
+}
+
+
+
+
+/************************ 
+sec-welf
+*************************/
+
+
+.welf-wrap .welf-inner ul {
+    list-style: none;
+    font-size: 1.4rem;
+    
+}
+
+.welf-wrap .welf-inner ul li {
+    counter-increment: list-number;
+    line-height: 3rem;
+}
+
+
+.welf-wrap .welf-inner ul li::before {
+    content: counter(list-number);
+    padding: 0rem 0.6rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: darkorange;
+    border-radius: 100%;
+    margin-right: 0.8rem;
+    
+}
+
+
+/************************ 
+sec-tab
+*************************/
+
+
+
+.perf-wrap .perf-inner ul {
+    list-style: none;
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    
+}
+
+.perf-wrap .perf-inner ul li {
+    counter-increment: list-number;
+    line-height: 3rem;
+    
+}
+
+
+
+.perf-wrap .perf-inner ul li::before {
+    content: counter(list-number);
+    padding: 0.3rem 0.8rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: darkorange;
+    border-radius: 100%;
+    margin-right: 0.8rem;
+    width: 2rem;
+    
+}
+
+
+/************************ 
+sec-rescue
+*************************/
+
+
+
+
+
+.perf-ul{
+    flex-direction: column;
+    align-items: flex-start
+    
+}
+
+.perf-ul li {
+    display : inline-flex;
+}
+
+.perf-ul li::before {
+    margin: auto;
+    display: inline-block;
+    height: 2rem;
+    line-height: 1.2rem;
+    width: 2rem;
+    text-align: center;
+}
+
+.perf-ul li p {
+    padding: 0.5rem;
+    line-height: 1.4rem;
+}
+
+
+
+
+/************************ 
+sec-rescue
+*************************/
+
+.rescuen-wrap {
+    height: 36rem;
+}
+
+.rescuen-inner {
+    height: 100%; 
+    width: 100%;
+    background-image: url('../img/Organ.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+
+/************************ 
+sec-rescue
+*************************/
+
+.coffeman {
+    height: 24rem;
+}
+
+.cha-inner {
+    margin: auto;
+}
+
+
+
+/************************ 
+sec-rescue
+*************************/
+
+.couns-table {
+    width: 100%;
+    border-top: 2px solid;
+    border-collapse: collapse;
+    font-size: 1.2rem;
+}
+
+.couns-table th {
+    font-weight: 50;
+    text-align: center;
+    width: 20%;
+    background-color: #f8f9fa;
+}
+
+
+.couns-table td {
+    padding: 1rem 0;
+}
+
+.couns-table td input {
+    margin-left: 2rem;
+}
+
+
+
+.couns-table tr {
+    height: 4rem;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.input-rl {
+    width: 100%;
+    border-radius: 4px;
+    height: 20rem;
+}
+
+.input-rl:focus {
+     border-radius: 4px;
+     outline: none;
+     border: 1px solid orange;
+}
+
+
+.see-rl {
+    width: 100%;
+    background-color: #f1f3f5;
+    border: none;
+    margin: 1.2rem 0 ;
+    display: inline-block;
+    padding: 1rem;
+    font-weight: 300;
+    
+}
+
+.input-style {
+    width: 60%;
+    border : 1px solid darkgray;
+    border-radius: 4px;
+    height: 2.6rem;
+    line-height: 1.8rem;
+    padding-left: 0.6rem;
+    
+}
+
+.input-style:focus {
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid orange;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #adb5bd;
+    font-weight: 200;
+    font-size: 1rem;
+}
+
+.checkbox-wrap span {
+    font-size: 1rem;
+}
+
+.checkbox-wrap {
+    margin-bottom: 2rem;
+    float: right;
+}
+
+.checkbox-wrarp::after {
+    content: '';
+    clear:both;
+}
+
+.btn-sand {
+    width: 100%;
+    height: 3rem;
+    background-color: black;
+    color:#fff;
+    outline: none;
+    margin-top: 3rem;
+}
+
+.btn-sand:hover {
+    background-color: orange;
+    border: none;
+}
+
+
+
+
+    .phone-wrap {
+        background-color: #f1f3f5;
+        margin-top: 2rem;
+    }
+
+    .phone-inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 12rem;
+    }
+
+    .phone-inner > p {
+        color: red;
+        border: 2px solid red;
+        border-radius: 50rem;
+        padding: 0.4rem 1rem;
+        text-align: center;
+        margin: 1rem;
+        font-weight: 600;
+    }
+
+    .phone-num {
+        padding-bottom: 0.4rem;
+        font-size: 3.2rem;
+    }
+
+
+
+
+* {
+  margin:0;
+  padding: 0;
+}
+
+
+/************************ 
+arc-set
+*************************/
+
+
+
+
+
+.arc-wrap {
+  display:flex;
+  flex-direction: row;
+  position : relative;
+    margin: 3rem 0 ;
+  z-index= 1;
+}
+
+.arc-inner:nth-child(2) {
+  margin: 0 -9rem;
+}
+
+.arc-inner {
+    display:flex;
+    flex-direction: column;
+    margin: auto;
+
+}
+
+.a {
+  height: 10rem;
+  width: 20rem;
+  border-top-left-radius: 20rem;
+  border-top-right-radius: 20rem;
+  border: 3rem solid red;
+  border-bottom: 0;
+}
+
+.b {
+  height: 10rem;
+  width: 20rem;
+  border-bottom-left-radius: 20rem;
+  border-bottom-right-radius: 20rem;
+  border: 3rem solid red;
+  border-top: 0;
+}
+
+/************************ 
+arc
+*************************/
+
+.txt-wrap {
+  position: absolute;
+  top: 11%;
+  margin-left: 45px;
+  height: 15.1rem;
+  width: 14.8rem;
+  border-radius: 50rem;
+  z-index:2;
+  text-align:center;
+  background-color:#fff;
+  padding: 1rem;
+  box-shadow: 0 0 0.8rem 0.3rem rgba( 0, 0, 0, 0.4);
+}
+
+.txt-inner {
+  display:inline-block;
+  margin-top: 3.2rem;
+}
+
+
+/************************ 
+tag
+*************************/
+
+.tag-line--red {
+    color: red;
+    font-weight: 600;
+    display:inline-block;
+    padding: 0.2rem 0.8rem 0.4em;
+    line-height: 1.2rem;
+    border: 3px solid red;
+    border-radius: 50rem;margin: 0
+
+}
+
+.ttl-txt {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+    line-height: 2.2rem;
+}
+
+/************************ 
+gradi
+*************************/
+
+body {
+  text-align: center;
+}
+
+.gradient-border {
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 10px;
+  width: 150px;
+  height: 150px;
+  border-style: solid;
+  border-image: linear-gradient(to right, #01c9ca 0%, #3886FF 100%);
+  border-image-slice: 1;
+  background: #f7f7f7
+}
+
+
