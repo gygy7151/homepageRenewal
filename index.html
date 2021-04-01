@@ -20,7 +20,7 @@
 <body>
 
   <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg fixed-top  bg-light navbar-light">
+    <nav class="navbar navbar-expand-lg fixed-top  bg-white navbar-light">
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <img id="nav-logo" src="./img/dataus-logo.png">
@@ -30,11 +30,10 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active"><a class="nav-link" href="./index.html">사업소개</a></li>
-          <li class="nav-item"><a class="nav-link" href="./company.html">회사소개</a></li>
-          <li class="nav-item"><a class="nav-link" href="./contact">고객지원</a></li>
-          <li class="nav-item "><a class="nav-link" href="./business1.html">복지제도</a></li>
-          <li class="nav-item"><a class="nav-link" href="./business1.html">지원문의</a></li>
+          <li class="nav-item active"><a class="nav-link" href="index.html">사업소개</a></li>
+          <li class="nav-item"><a class="nav-link" href="company.html">회사소개</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">고객지원</a></li>
+          <li class="nav-item " ><a class="nav-link" href="business1.html">인재채용</a></li>
         </ul>
       </div>
     </div>
@@ -54,15 +53,15 @@
           <div class="carousel-caption  d-md-inline">
             <h3>Play in Cloud</h3>
             <p>NHN CLOUD SERVICE<b>USER GROUP</b></p>
-            <a href="#" class="btn btn-line--white">자세히 보기</a>
+            <a href="https://www.facebook.com/groups/777354092892655" class="btn btn-line--white">자세히 보기</a>
           </div>
         </div>
         <!-- Slide Two - Set the background image for this slide in the line below -->
         <div class="carousel-item" style="background-image: url('./img/blue-banner.jpg')">
-          <div class="carousel-caption d-none d-md-block">
-            <h3>NHN와 데이터스와 함께하는 교육과정</h3>
-            <p>NHN CLOUD SERVICE<b>YouTube</b></p>
-            <a href="#" class="btn btn-line--white">자세히 보기</a>
+          <div class="carousel-caption d-none d-md-block carousel-caption-2st">
+            <h3>데이터스와 함께하는 NHN 교육과정</h3>
+            <p>NHN CLOUD SERVICE <b>YouTube</b></p>
+            <a href="https://www.youtube.com/channel/UCge_LoGbLM1_2X8QiEZ5GJA" class="btn btn-line--white">자세히 보기</a>
           </div>
         </div>
         </div>
@@ -152,7 +151,7 @@
                 </div>
             </div>
             <div class="perf3st row">
-                <img class="col-sm-6" src="https://post-phinf.pstatic.net/MjAxOTEyMDNfMTE4/MDAxNTc1MzQ3ODQ0ODM0.hFVBurJPr2YTFO_EpAGRswP7fq1lvsc0HBKB48VXc7og.KZQ0-_o2B8NU7VwJsPzmgS7f76QlkYP0wGkwsfxPALwg.JPEG/00.JPG?type=w1200" alt="골든디스크어워즈 투표">
+                <img class="col-sm-6" src="img/youtube.jpg">
                 <div class="col-sm-6 perf-wrap">
                     <div class="perf-inner">
                         <p class="tag-line-r--red">NHN Cloud기반 교육 콘텐츠 생산</p>
@@ -202,8 +201,8 @@
                         <h1 class="book-sns-ttl">더 다양한 콘텐츠를 원하시나요?</h1>
                         <p>데이터스에서 제공하고 있는 콘텐츠들을 만나보세요.</p>
                         <div class="cont-btn-sns">
-                            <button class="btn btn-line--black mb-2" type="button">페이스북 바로가기</button>
-                            <button class="btn btn-line--black" type="button">유튜브 채널 바로가기</button>
+                            <button class="btn btn-line--black mb-2" type="button" onclick="location.href='https://www.facebook.com/groups/777354092892655'">페이스북 바로가기</button>
+                           <button class="btn btn-line--black mb-2" type="button" onclick="location.href='https://www.youtube.com/channel/UCge_LoGbLM1_2X8QiEZ5GJA'">유튜브 채널 바로가기</button>
                         </div>
                     </div>
                 </div>
@@ -213,7 +212,7 @@
     
     <article class="sec-img-link">
         <div class="img-link-wrap">
-            <a class="img-link img1st" href="#">
+            <a class="img-link img1st" href="business1.html">
                 <span>
                 </span>
                 <div class="cont-img-wrap">
@@ -222,7 +221,7 @@
                 </div>
             </a>
             
-            <a class="img-link img2st" href="#">
+            <a class="img-link img2st" href="contact.html">
                 <span>
                 </span>
                 <div class="cont-img-wrap">
@@ -257,8 +256,12 @@
             </div>
         </div>
         <div class="row col-sm-2 ">
-            <button class="btn col-6 foot-sns-icon" type="button"><img class="face-icon" src="./img/face-icon--black.png"></button>
-            <button class="btn col-6 foot-sns-icon" type="button"><img src="./img/yout-icon--black.png"></button>
+            <button class="btn col-6 foot-sns-icon" type="button"
+            onclick="location.href='https://www.facebook.com/groups/777354092892655'">
+                <img class="face-icon" src="./img/face-icon--blue.png">
+            </button>
+            <button class="btn col-6 foot-sns-icon" type="button" onclick="location.href='https://www.youtube.com/channel/UCge_LoGbLM1_2X8QiEZ5GJA'"><img src="./img/yout-icon--red.png">
+            </button>
         </div>
     </div>
   </footer>
