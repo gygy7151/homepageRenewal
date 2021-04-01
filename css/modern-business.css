@@ -3,6 +3,29 @@ set document
 *************************/
 
 
+
+header > h1 {text-align: left;}
+
+.navbar-nav > li {
+    border-radius: 50rem;
+    margin-left: 0.6rem; 
+    padding: 0 1.2rem;
+    font-weight: 600;
+}
+
+.active {color: aqua;}
+
+
+.navbar-nav > li:hover {
+    background-color: #f0f0f0;   
+}
+
+.nav-active {
+    color: firebrick;
+}
+
+
+
 body {
     margin: 0;
     padding: 0;
@@ -82,6 +105,14 @@ set tag
     border-radius: 0;
 }
 
+.btn-line--white:hover {
+    border: 1px solid #fff;
+    background-color: #fff;
+    color: darkblue;
+    font-weight: 600;
+}
+
+
 .btn-line--black {
     border: 1px solid black;
     width: 100%;
@@ -89,6 +120,23 @@ set tag
     line-height: 2.2rem;
     border-radius: 0;
 }
+
+.btn-line--black:hover {
+    border: 1px solid orange;
+    background-color: orange;
+    color: #fff;
+}
+
+.btn > img { 
+    filter: gray; 
+    filter: grayscale(1); 
+    -webkit-filter: grayscale(1);
+
+}
+.btn > img:hover { 
+    filter: none; /* IE6-9 */
+}
+
 
 .btn-ntap img {
     width: 0.9rem;
@@ -155,7 +203,8 @@ carousel
 }
 
 .carousel-caption h3{
-    font-size: 4rem;
+    font-size: 2.5rem;
+    font-weight: 100;
 }
 
 .carousel-caption p {
